@@ -11,13 +11,12 @@ function App() {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: require('./loading-circles.json')
+      animationData: require('./text-animation.json')
     });
   }, []);
 
   return (
     <div className="App">
-      <h1>React Lottie Demo</h1>
       <div className="container" ref={container}></div>
     </div>
   );
