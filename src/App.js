@@ -8,10 +8,10 @@ function App() {
   useEffect(() => {
     Lottie.loadAnimation({
       container: container.current,
-      renderer: 'svg',
+      renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require('./text-animation.json')
+      animationData: require("./data.json"),
     });
   }, []);
 
