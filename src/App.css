@@ -1,5 +1,20 @@
 .App {
-  text-align: center;
-  background-color: '1E184E'
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
 
+.controls {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+}
+
+.loop {
+  padding: 5px;
+}
+
+.play {
+  padding: 5px;
 }

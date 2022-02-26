@@ -1,23 +1,39 @@
 import "./App.css";
-import { useEffect, useRef } from "react";
-import Lottie from "lottie-web";
+import React, { useState } from "react";
+import Lottie from "react-lottie-player";
+import KPI from "./kpi.json";
 
 function App() {
-  const container = useRef(null);
-
-  useEffect(() => {
-    Lottie.loadAnimation({
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("./data.json"),
-    });
-  }, []);
+  const [play, setPlay] = useState(true);
+  const [loop, setLoop] = useState(true);
 
   return (
     <div className="App">
-      <div className="container" ref={container}></div>
+      <Lottie loop animationData={KPI} play={play} loop={loop} />
+      
+      {/* Loop */}
+      <div className="controls">
+        <div className="loop">
+          <input
+            type="checkbox"
+            checked={loop}
+            onChange={(e) => setLoop(e.target.checked)}
+            id="loop"
+          />{" "}
+          <label htmlFor="loop">Loop</label>
+        </div>
+
+        {/* Play */}
+        <div className="play">
+          <input
+            type="checkbox"
+            checked={play}
+            onChange={(e) => setPlay(e.target.checked)}
+            id="playing"
+          />{" "}
+          <label htmlFor="playing">Playing</label>
+        </div>
+      </div>
     </div>
   );
 }
