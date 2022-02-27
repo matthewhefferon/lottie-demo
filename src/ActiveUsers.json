@@ -82,6 +82,60 @@
                 }
             },
             "ao": 0,
+            "ef": [
+                {
+                    "ty": 5,
+                    "nm": "barColor",
+                    "np": 3,
+                    "mn": "ADBE Color Control",
+                    "ix": 1,
+                    "en": 1,
+                    "ef": [
+                        {
+                            "ty": 2,
+                            "nm": "Color",
+                            "mn": "ADBE Color Control-0001",
+                            "ix": 1,
+                            "v": {
+                                "a": 0,
+                                "k": [
+                                    0.945098042488,
+                                    0,
+                                    0.341176480055,
+                                    1
+                                ],
+                                "ix": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ty": 5,
+                    "nm": "shadowColor",
+                    "np": 3,
+                    "mn": "ADBE Color Control",
+                    "ix": 2,
+                    "en": 1,
+                    "ef": [
+                        {
+                            "ty": 2,
+                            "nm": "Color",
+                            "mn": "ADBE Color Control-0001",
+                            "ix": 1,
+                            "v": {
+                                "a": 0,
+                                "k": [
+                                    0.949019670486,
+                                    0,
+                                    0.337254911661,
+                                    0.301960796118
+                                ],
+                                "ix": 1
+                            }
+                        }
+                    ]
+                }
+            ],
             "ip": 0,
             "op": 300,
             "st": 0,
@@ -91,7 +145,7 @@
             "ddd": 0,
             "ind": 2,
             "ty": 5,
-            "nm": "percent",
+            "nm": "Percent",
             "sr": 1,
             "ks": {
                 "o": {
@@ -1018,7 +1072,8 @@
                                     0.341176470588,
                                     1
                                 ],
-                                "ix": 4
+                                "ix": 4,
+                                "x": "var $bm_rt;\n$bm_rt = thisComp.layer('Controller').effect('shadowColor')('Color');"
                             },
                             "o": {
                                 "a": 0,
@@ -1115,7 +1170,7 @@
                     "a": 0,
                     "k": [
                         540,
-                        540,
+                        542,
                         0
                     ],
                     "ix": 2,
@@ -1196,9 +1251,9 @@
                             "ty": "tm",
                             "s": {
                                 "a": 0,
-                                "k": 0,
+                                "k": 39,
                                 "ix": 1,
-                                "x": "var $bm_rt;\n$bm_rt = thisComp.layer('percent').effect('Slider Control')('Slider');"
+                                "x": "var $bm_rt;\n$bm_rt = thisComp.layer('Percent').effect('Slider Control')('Slider');"
                             },
                             "e": {
                                 "a": 0,
@@ -1226,7 +1281,8 @@
                                     0.341176470588,
                                     1
                                 ],
-                                "ix": 3
+                                "ix": 3,
+                                "x": "var $bm_rt;\n$bm_rt = thisComp.layer('Controller').effect('barColor')('Color');"
                             },
                             "o": {
                                 "a": 0,
@@ -1297,7 +1353,7 @@
                             },
                             "r": {
                                 "a": 0,
-                                "k": 0,
+                                "k": -0.203,
                                 "ix": 6
                             },
                             "o": {

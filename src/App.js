@@ -1,7 +1,8 @@
 import "./App.css";
 import React, { useState } from "react";
 import Lottie from "react-lottie-player";
-import KPI from "./kpi.json";
+import AU from "./ActiveUsers.json";
+
 
 function App() {
   const [play, setPlay] = useState(true);
@@ -9,8 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <Lottie loop animationData={KPI} play={play} loop={loop} />
-      
+      <Lottie loop animationData={AU} play={play} loop={loop} />
+
       {/* Loop */}
       <div className="controls">
         <div className="loop">

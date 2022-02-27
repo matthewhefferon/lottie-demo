@@ -1,20 +1,32 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  justify-content: center;
+  align-items: center;
 }
 
 .controls {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: white;
+  width: 100%;
   padding: 30px;
 }
 
 .loop {
-  padding: 5px;
+  padding: 10px;
 }
 
 .play {
-  padding: 5px;
+  padding: 10px;
+}
+
+.barColor {
+  padding: 10px;
+}
+
+.shadowColor {
+  padding: 10px;
 }
